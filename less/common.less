@@ -1,0 +1,40 @@
+@import "./mixins.less";
+body {
+
+}
+html,body,#wrapper {
+	width: 100%;
+  height: 100%;
+  background: #000;
+  overflow: hidden;
+}
+::-webkit-input-placeholder { 
+  color: #4e759f; 
+}
+.hide{
+	display: none;
+}
+.anim{
+	opacity: 0;
+}
+.overlayer{
+	position: fixed;
+	z-index: 20;
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,.9);
+	top: 0;
+	left: 0;
+	display: none;
+}
+.btn{
+	position: absolute;
+	display: block;
+  outline: none;
+  .none-apperance();
+}
+.btn-blue {
+  padding: 20px 54px;
+  .border-radius(10px);
+  background: #4774a0;
+}

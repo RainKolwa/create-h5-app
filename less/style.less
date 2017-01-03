@@ -1,0 +1,28 @@
+@charset "UTF-8";
+@import "mixins.less";
+@import "keyframes.less";
+@import "normalize.less";
+@import "common.less";
+@import "loader.less";
+
+#wrapper {
+	min-height: 1080px;
+}
+
+.swiper-slide {
+	font-size: 24px;
+	color: white;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	box-sizing: border-box;
+	&:nth-child(1) {
+		background: green;
+	}
+	&:nth-child(2) {
+		background: blue;
+	}
+	&:nth-child(3) {
+		background: orange;
+	}
+}

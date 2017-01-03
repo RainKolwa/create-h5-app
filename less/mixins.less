@@ -1,0 +1,143 @@
+//动画类
+//==============================================================================//
+.animation(...){
+	animation : @arguments;
+	-webkit-animation : @arguments;
+	-ms-animation : @arguments;
+}
+
+.transform(@value){
+	transform : @value;
+	-webkit-transform : @value;
+	-ms-transform : @value;
+}
+
+.transform-origin(@value){
+	transform-origin : @value;
+	-webkit-transform-origin : @value;
+	-ms-transform-origin : @value;
+}
+
+.transition(...){
+	transition : @arguments;
+	-webkit-transition : @arguments;
+	-ms-transition : @arguments;
+}
+
+.transition-delay(@time){
+	transition-delay : @time;
+	-webkit-transition-delay : @time;
+	-ms-transition-delay : @time;
+}
+
+.translate(@x:0;@y:0){
+	.transform(translate(@x,@y));
+}
+
+.translateX(@x:0){
+	.transform(translateX(@x));
+}
+
+.translateY(@y:0){
+	.transform(translateY(@y));
+}
+
+.translate3d(@x:0;@y:0;@z:0){
+	.transform(translate3d(@x,@y,@z));
+}
+
+.scale(@value){
+	.transform(scale(@value));
+}
+
+.scale3d(@x:1;@y:1;@z:1){
+	.transform(scale3d(@x,@y,@z));
+}
+
+.rotate(@deg:0){
+	.transform(rotate(@deg));
+}
+
+.rotate3d(@x:0;@y:0;@z:0;@deg:0){
+	.transform(rotate3d(@x,@y,@z,@deg));
+}
+
+//样式皮肤类
+//==============================================================================//
+.border-radius(@rad:5px){
+	border-radius : @rad;
+	-webkit-border-radius : @rad;
+	-ms-border-radius : @rad;
+}
+
+.box-shadow(@shadow:0 0 5px rgba(0,0,0,.4)){
+	box-shadow : @shadow;
+	-webkit-box-shadow : @shadow;
+	-ms-box-shadow : @shadow;
+}
+
+.box-sizing(@type:border-box){
+	box-sizing : @type;
+	-webkit-box-sizing : @type;
+	-ms-box-sizing : @type;
+}
+
+.linear-gradient(@fromColor;@toColor){	
+	background : @fromColor; 
+    background : -webkit-gradient(linear, 0 0, 0 bottom, from(@fromColor), to(@toColor)); 
+}
+
+.none-apperance(){
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+}
+
+//布局类
+//==============================================================================//
+.display(@value)when(@value=flex){
+    display:-webkit-box;
+    display:-ms-flexbox;
+    display:box;
+}
+
+.box-flex(@value){
+	-moz-box-flex:@value;
+    -webkit-box-flex:@value;
+    box-flex:@value;
+}
+
+.flex(){
+	display:-webkit-box;
+	display:-webkit-flex;
+	display:flex;
+}
+
+.box-direction(@value){
+	-moz-box-direction:@value;
+    -webkit-box-direction:@value;
+    box-direction:@value;
+}
+.position-center(@width;@height){
+	width : @width;
+	height : @height;
+	position : absolute;
+	left : 50%;
+	top : 50%;
+	margin-left : @width / -2;
+	margin-top : @height / -2;
+}
+
+.font-number(){
+	font-family:Arial;
+}
+
+.font-small(){
+	.scale3d(.7,.7,1);
+}
+
+.position(@left, @top){
+	position: absolute;
+	left: @left;
+	top: @top;
+}
