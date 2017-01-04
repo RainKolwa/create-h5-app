@@ -1,17 +1,21 @@
 {
-  "name": "report",
+  "name": "create-h5-app",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "RainKolwa <jeremy199003@gmail.com>",
   "license": "ISC",
   "dependencies": {
     "gsap": "^1.19.0",
     "jquery": "^3.1.1",
     "pxloader": "^1.1.2",
     "swiper": "^3.4.1"
+  },
+  "repository": {
+    "url": "git@github.com:RainKolwa/create-h5-app.git",
+    "type": "git"
   }
 }
